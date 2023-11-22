@@ -7,12 +7,12 @@ public class Stack implements IStack {
 	private ArrayList<Integer> s1 = new ArrayList<Integer>() ;
 	//private Stack s2 = new Stack ();
 	private int size = 0;
-	/*Stack (int size) {
+	Stack (int size) {
 		this.size = size;
 	}
 	Stack () {
-		int size = 0;
-	}*/
+		size = 0;
+	}
 	@Override
 	public boolean isEmpty() {
 		if (size == 0) {
