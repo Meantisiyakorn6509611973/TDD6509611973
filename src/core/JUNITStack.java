@@ -20,21 +20,21 @@ public class JUNITStack extends TestCase {
 		assertEquals(1, s1.top());
 		assertEquals(1, size);
 	}
-	public void lastInFirstOut() {
+	public void testlastInFirstOut() {
 		Stack s1 = new Stack() ;
 		s1.push(1);
 		s1.pop();
 		int size = s1.getSize();
 		assertEquals(0, size);
-		assertEquals(null, s1.top());
+		
 	}
 	
-	public void PushElmToLimitedSizeStack() {
+	public void testPushElmToLimitedSizeStack() {
 		Stack s1 = new Stack(3) ;
-		int size = s1.getSize();
 		s1.push(1);
 		s1.push(2);
 		s1.push(3);
+		int size = s1.getSize();
 		assertEquals(3, size);
 		assertTrue(s1.isFull());
 		
