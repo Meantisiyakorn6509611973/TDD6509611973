@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Stack implements IStack {
 
 	private ArrayList<Integer> s1 = new ArrayList<Integer>() ;
-	//private Stack s2 = new Stack ();
-	private int size = 0;
-	Stack (int size) {
-		this.size = size;
+	private int size;
+	private int maxSize;
+	Stack (int maxSize) {
+		this.maxSize = maxSize;
 	}
 	Stack () {
 		size = 0;
@@ -23,7 +23,7 @@ public class Stack implements IStack {
 	}
 	@Override
 	public boolean isFull() {
-		if (size == 3) {
+		if (size == maxSize) {
 			return true;
 		
 		}
@@ -36,15 +36,12 @@ public class Stack implements IStack {
 			return size;
 		}
 		else {
-			return 0;
-			
+			return 0;	
 		}
-		// TODO Auto-generated method stub
 	}
 
 	@Override
 	public void push(int elm) {		
-		//int size = 0;
 		s1.add(elm);
 		size++;
 	
@@ -69,7 +66,6 @@ public class Stack implements IStack {
 		else {
 			return (int) s1.get(size--);
 		}
-		// TODO Auto-generated method stub
 
 	}
 	

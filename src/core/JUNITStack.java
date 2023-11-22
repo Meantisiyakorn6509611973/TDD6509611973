@@ -14,9 +14,7 @@ public class JUNITStack extends TestCase {
 	}
 	public void testPushToTop() {
 		Stack s1 = new Stack() ;
-		int num = 1;
-		
-		s1.push(num);
+		s1.push(1);
 		int size = s1.getSize();
 		
 		assertEquals(1, s1.top());
@@ -24,10 +22,9 @@ public class JUNITStack extends TestCase {
 	}
 	public void lastInFirstOut() {
 		Stack s1 = new Stack() ;
-		int num = 1;
-		s1.push(num);
-		int size = s1.getSize();
+		s1.push(1);
 		s1.pop();
+		int size = s1.getSize();
 		assertEquals(0, size);
 		assertEquals(null, s1.top());
 	}
