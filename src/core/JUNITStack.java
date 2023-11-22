@@ -34,9 +34,13 @@ public class JUNITStack extends TestCase {
 	
 	public void PushElmToLimitedSizeStack() {
 		Stack s1 = new Stack() ;
+		int size = s1.getSize();
 		s1.push(1);
 		s1.push(2);
 		s1.push(3);
+		assertEquals(3, size);
+		assertTrue(s1.isEmpty());
+		
 		
 		
 	}
