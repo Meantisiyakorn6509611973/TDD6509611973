@@ -64,13 +64,8 @@ public class Stack implements IStack {
 			return -1;
 		}
 		else {
-			if (size==0) {
-				return (int) s1.get(size-1);
-			}
-			else {
-				size = size-1;
-				return (int) s1.get(size);
-			}
+			size = size-1;
+			return (int) s1.get(size);
 		}
 
 	}

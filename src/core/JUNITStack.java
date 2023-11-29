@@ -14,18 +14,21 @@ public class JUNITStack extends TestCase {
 	}
 	public void testPushToTop() {
 		Stack s1 = new Stack() ;
-		s1.push(1);
+		s1.push(2);
 		int size = s1.getSize();
 		
-		assertEquals(1, s1.top());
+		assertEquals(2, s1.top());
 		assertEquals(1, size);
 	}
 	public void testlastInFirstOut() {
 		Stack s1 = new Stack() ;
-		s1.push(1);
+		s1.push(2);
+		s1.push(3);
+		assertEquals(3, s1.top());
 		s1.pop();
 		int size = s1.getSize();
-		assertEquals(0, size);
+		assertEquals(2, s1.top());
+		assertEquals(1, size);
 		
 	}
 	
